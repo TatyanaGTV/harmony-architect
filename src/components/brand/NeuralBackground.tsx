@@ -68,18 +68,22 @@ export function NeuralBackground({ className = "", opacity = 0.28 }: Props) {
         className="animate-drift h-full w-full"
         fill="none"
       >
-        {LINKS.map(([a, b], i) => (
-          <line
-            key={i}
-            x1={NODES[a][0]}
-            y1={NODES[a][1]}
-            x2={NODES[b][0]}
-            y2={NODES[b][1]}
-            stroke="var(--gold)"
-            strokeWidth="0.12"
-            strokeOpacity="0.75"
-          />
-        ))}
+        {LINKS.map(([a, b], i) => {
+          const from = NODES[a] ?? [0, 0];
+          const to = NODES[b] ?? [0, 0];
+          return (
+            <line
+              key={i}
+              x1={from[0]}
+              y1={from[1]}
+              x2={to[0]}
+              y2={to[1]}
+              stroke="var(--gold)"
+              strokeWidth="0.12"
+              strokeOpacity="0.75"
+            />
+          );
+        })}
         {NODES.map(([x, y], i) => (
           <circle
             key={i}
