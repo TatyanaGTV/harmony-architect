@@ -53,8 +53,8 @@ export function Hero() {
             height={520}
             className="animate-drift relative w-[280px] max-w-full sm:w-[380px] lg:w-[500px]"
             style={{
-              maskImage: "radial-gradient(circle at 50% 50%, #000 58%, transparent 72%)",
-              WebkitMaskImage: "radial-gradient(circle at 50% 50%, #000 58%, transparent 72%)",
+              maskImage: "radial-gradient(closest-side circle at 50% 50%, #000 88%, transparent 100%)",
+              WebkitMaskImage: "radial-gradient(closest-side circle at 50% 50%, #000 88%, transparent 100%)",
             }}
           />
         </div>
