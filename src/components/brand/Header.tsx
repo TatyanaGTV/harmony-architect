@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import logoMark from "@/assets/logo-mark.png.asset.json";
 import { GoldButton } from "./Buttons";
 
 const NAV = [
-  { label: "Обо мне", href: "#about" },
-  { label: "Услуги", href: "#services" },
-  { label: "Моё образование", href: "#education" },
-  { label: "Специалистам", href: "#specialists" },
-  { label: "Контакты", href: "#contacts" },
+  { label: "Обо мне", href: "/about" },
+  { label: "Услуги", href: "/#services" },
+  { label: "Моё образование", href: "/#education" },
+  { label: "Специалистам", href: "/#specialists" },
+  { label: "Контакты", href: "/#contacts" },
 ];
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = useLocation({ select: (l) => l.pathname });
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -20,13 +22,15 @@ export function Header() {
     };
   }, [open]);
 
+  const isActive = (href: string) => href === "/about" && pathname === "/about";
+
   return (
     <header
       className="fixed inset-x-0 top-0 z-50 border-b border-gold/20 backdrop-blur-[12px]"
       style={{ backgroundColor: "rgba(6,31,26,0.90)" }}
     >
       <div className="container-page flex h-[72px] items-center justify-between md:h-[86px]">
-        <a href="#top" className="flex items-center gap-3" aria-label="Tatiana Boyraz — на главную">
+        <a href="/" className="flex items-center gap-3" aria-label="Tatiana Boyraz — на главную">
           <img
             src={logoMark.url}
             alt="Логотип Tatiana Boyraz — дерево и нейронные связи"
@@ -47,15 +51,24 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="font-body text-[12.5px] tracking-[0.05em] text-foreground uppercase transition-colors duration-300 hover:text-gold-light"
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`relative py-2 font-body text-[12.5px] tracking-[0.05em] uppercase transition-colors duration-300 hover:text-gold-light ${
+                isActive(item.href) ? "text-gold-light" : "text-foreground"
+              }`}
             >
               {item.label}
+              {isActive(item.href) ? (
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 -bottom-0.5 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
+                />
+              ) : null}
             </a>
           ))}
         </nav>
 
         <div className="hidden lg:block">
-          <GoldButton href="#contacts" className="px-6 py-3 text-[12px]">
+          <GoldButton href="/#contacts" className="px-6 py-3 text-[12px]">
             Записаться
           </GoldButton>
         </div>
@@ -88,14 +101,17 @@ export function Header() {
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 font-body text-[13px] tracking-[0.06em] text-foreground uppercase transition-colors hover:text-gold-light"
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`block py-3 font-body text-[13px] tracking-[0.06em] uppercase transition-colors hover:text-gold-light ${
+                    isActive(item.href) ? "text-gold-light" : "text-foreground"
+                  }`}
                 >
                   {item.label}
                 </a>
               </li>
             ))}
             <li className="pt-3">
-              <GoldButton href="#contacts" fullWidth onClick={() => setOpen(false)}>
+              <GoldButton href="/#contacts" fullWidth onClick={() => setOpen(false)}>
                 Записаться
               </GoldButton>
             </li>
