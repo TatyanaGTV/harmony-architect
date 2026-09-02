@@ -6,7 +6,7 @@ import { GoldButton } from "./Buttons";
 const NAV = [
   { label: "Обо мне", href: "/about" },
   { label: "Услуги", href: "/#services" },
-  { label: "Моё образование", href: "/#education" },
+  { label: "Моё образование", href: "/education" },
   { label: "Специалистам", href: "/#specialists" },
   { label: "Контакты", href: "/#contacts" },
 ];
@@ -22,7 +22,7 @@ export function Header() {
     };
   }, [open]);
 
-  const isActive = (href: string) => href === "/about" && pathname === "/about";
+  const isActive = (href: string) => !href.includes("#") && href === pathname;
 
   return (
     <header
