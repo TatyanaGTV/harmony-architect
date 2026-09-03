@@ -1,3 +1,10 @@
+import repeatAsset from "@/assets/game-repeat.jpg.asset.json";
+import guessAsset from "@/assets/game-guess.jpg.asset.json";
+import memoryAsset from "@/assets/game-memory.png.asset.json";
+import doTheSameAsset from "@/assets/game-dothesame.png.asset.json";
+import fruitsAsset from "@/assets/game-fruits.jpg.asset.json";
+import cortexAsset from "@/assets/game-cortex.jpg.asset.json";
+
 export type Game = {
   title: string;
   /** Путь к изображению игры. Пустая строка — изображение ещё не загружено. */
@@ -8,32 +15,32 @@ export type Game = {
 export const games: Game[] = [
   {
     title: "Повтори это",
-    image: "",
+    image: repeatAsset.url,
     url: "https://tatyanagtv.github.io/tryToRepeat/",
   },
   {
     title: "Угадай, кто это",
-    image: "",
+    image: guessAsset.url,
     url: "https://tatyanagtv.github.io/GuessWhiIsIt/",
   },
   {
     title: "Мемори",
-    image: "",
+    image: memoryAsset.url,
     url: "https://tatyanagtv.github.io/MemoryGame/",
   },
   {
     title: "Сделай так же",
-    image: "",
+    image: doTheSameAsset.url,
     url: "https://tatyanagtv.github.io/DoTheSame/",
   },
   {
     title: "Фрукты",
-    image: "",
+    image: fruitsAsset.url,
     url: "https://tatyanagtv.github.io/Fuits5/",
   },
   {
     title: "Кортекс",
-    image: "",
+    image: cortexAsset.url,
     url: "https://tatyanagtv.github.io/Cortex/",
   },
 ];
