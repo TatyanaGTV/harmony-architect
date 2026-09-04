@@ -341,24 +341,35 @@ function ServicesPage() {
         <section
           id="skorochtenie"
           aria-labelledby="skorochtenie-title"
-          className="scroll-mt-[100px] py-[80px] md:py-[100px]"
+          className="scroll-mt-[100px] py-[90px] md:py-[120px]"
           style={{ backgroundColor: "var(--bg-primary)" }}
         >
           <div className="container-page max-w-[900px]">
             <Reveal>
-              <div className="flex flex-col gap-8 rounded-[var(--radius-large)] border border-gold/35 bg-card p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12">
-                <div>
-                  <h2
-                    id="skorochtenie-title"
-                    className="font-heading text-[32px] leading-tight text-gold-light sm:text-[40px]"
-                  >
-                    Скорочтение
-                  </h2>
-                  <div className="mt-4">
-                    <Price>1 250 ₽</Price>
-                  </div>
-                </div>
-                <GoldButton href="/#contacts" className="w-full shrink-0 sm:w-auto">
+              <h2
+                id="skorochtenie-title"
+                className="font-heading text-[34px] leading-tight text-gold-light sm:text-[44px] lg:text-[52px]"
+              >
+                Скорочтение
+              </h2>
+              <LeafDivider align="left" className="mt-5" />
+              <div className="mt-6">
+                <Price>1 250 ₽</Price>
+              </div>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <SubTitle>Для чего нужны занятия?</SubTitle>
+              <p className="mt-6 max-w-2xl text-base leading-[1.8] text-muted-foreground sm:text-[17px]">
+                Занятия направлены на развитие навыков эффективного чтения, повышение скорости обработки
+                текстовой информации и формирование более продуктивных способов работы с текстом.
+              </p>
+            </Reveal>
+
+            <Reveal delay={150}>
+              <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-10">
+                <Price>1 250 ₽</Price>
+                <GoldButton href="/#contacts" className="w-full sm:w-auto">
                   Записаться
                 </GoldButton>
               </div>
