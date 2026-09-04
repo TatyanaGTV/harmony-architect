@@ -5,7 +5,7 @@ import { GoldButton } from "./Buttons";
 
 const NAV = [
   { label: "Обо мне", href: "/about" },
-  { label: "Услуги", href: "/#services" },
+  { label: "Услуги", href: "/services" },
   { label: "Моё образование", href: "/education" },
   { label: "Специалистам", href: "/specialists" },
   { label: "Контакты", href: "/#contacts" },
