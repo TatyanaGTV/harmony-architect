@@ -6,7 +6,7 @@ import { LeafDivider } from "@/components/brand/Leaf";
 import { Reveal } from "@/components/brand/Reveal";
 import { NeuralBackground } from "@/components/brand/NeuralBackground";
 
-const TITLE = "Мои услуги — Татьяна Бойраз, нейропсихолог";
+const TITLE = "Чем я могу помочь — Татьяна Бойраз, нейропсихолог";
 const DESCRIPTION =
   "Нейропсихологическая диагностика, коррекция, скорочтение и консультирование. Стоимость и подробное описание услуг нейропсихолога Татьяны Бойраз.";
 
@@ -100,7 +100,7 @@ function ServicesPage() {
           <NeuralBackground opacity={0.18} />
           <div className="container-page relative text-center">
             <h1 className="font-heading text-[36px] leading-tight tracking-[0.01em] text-gold-gradient sm:text-[48px] lg:text-[58px]">
-              Мои услуги
+              Чем я могу помочь
             </h1>
             <LeafDivider className="mt-6" />
           </div>
@@ -387,7 +387,7 @@ function ServicesPage() {
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
                 <h2 className="font-heading text-[32px] leading-tight text-gold-light sm:text-[42px]">
-                  Не знаете, с чего начать?
+                  Готовы начать?
                 </h2>
                 <LeafDivider className="mt-5" />
                 <p className="mt-6 text-base leading-[1.8] text-muted-foreground sm:text-[17px]">
