@@ -391,8 +391,7 @@ function ServicesPage() {
                 </h2>
                 <LeafDivider className="mt-5" />
                 <p className="mt-6 text-base leading-[1.8] text-muted-foreground sm:text-[17px]">
-                  Если Вы не знаете, какая услуга подойдет именно Вам или Вашему ребенку, Вы можете
-                  записаться на консультацию.
+                  Запишитесь на консультацию/диагностику и начните менять жизнь к лучшему.
                 </p>
                 <div className="mt-9">
                   <GoldButton href="/#contacts" className="w-full sm:w-auto">
