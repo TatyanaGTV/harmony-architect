@@ -155,6 +155,33 @@ function SpecialistsPage() {
             </ul>
           </div>
         </section>
+
+        {/* ЗАКАЗ ИГРЫ */}
+        <section
+          aria-labelledby="custom-game-title"
+          className="relative overflow-hidden py-[80px] md:py-[100px]"
+          style={{ backgroundColor: "var(--bg-deep)" }}
+        >
+          <NeuralBackground opacity={0.1} />
+          <div className="container-page relative max-w-[860px] text-center">
+            <Reveal>
+              <LeafDivider className="mb-8" />
+              <p
+                id="custom-game-title"
+                className="mx-auto max-w-[820px] text-[15.5px] leading-[1.8] text-muted-foreground sm:text-[17px]"
+              >
+                Вы можете заказать разработку своей коррекционно-обучающей игры по Вашим материалам
+                или адаптацию настольной игры/настольно-печатного пособия под проведение
+                онлайн-занятий.
+              </p>
+              <div className="mt-10">
+                <GoldButton href="/#contacts" className="w-full sm:w-auto">
+                  Заказать
+                </GoldButton>
+              </div>
+            </Reveal>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
