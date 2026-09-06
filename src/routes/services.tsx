@@ -91,7 +91,7 @@ function ServicesPage() {
       <main>
         {/* HERO */}
         <section
-          className="relative overflow-hidden pt-[150px] pb-14 md:pt-[180px] md:pb-20"
+          className="relative overflow-hidden pt-[150px] pb-10 md:pt-[180px] md:pb-14"
           style={{
             background:
               "radial-gradient(120% 90% at 78% 30%, rgba(11,51,41,0.9) 0%, rgba(6,31,26,1) 60%), var(--gradient-page)",
@@ -107,17 +107,21 @@ function ServicesPage() {
         </section>
 
         {/* КАРТОЧКИ УСЛУГ */}
-        <section className="py-[70px] md:py-[90px]" style={{ backgroundColor: "var(--bg-primary)" }}>
+        <section
+          className="pt-[42px] pb-[70px] md:pt-[54px] md:pb-[90px]"
+          style={{ backgroundColor: "var(--bg-primary)" }}
+        >
           <div className="container-page">
             <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
               {SERVICES_CARDS.map((s, i) => (
-                <Reveal as="li" key={s.anchor} delay={i * 90}>
-                  <article className="flex min-h-[230px] flex-col rounded-[var(--radius-card)] border border-gold/35 bg-card p-7 transition-all duration-[250ms] ease-out hover:-translate-y-[3px] hover:border-gold hover:bg-card-hover">
+                <Reveal as="li" key={s.anchor} delay={i * 90} className="h-full">
+                  <article className="flex h-[270px] flex-col rounded-[var(--radius-card)] border border-gold/35 bg-card p-7 transition-all duration-[250ms] ease-out hover:-translate-y-[3px] hover:border-gold hover:bg-card-hover">
                     <h2 className="font-heading text-[22px] leading-snug text-gold-light">
                       {s.title}
                     </h2>
-                    <p className="mt-4 font-heading text-[28px] text-gold-bright">{s.price}</p>
-                    <div className="mt-auto pt-6">
+                    <div className="flex-1" aria-hidden="true" />
+                    <p className="font-heading text-[28px] text-gold-bright">{s.price}</p>
+                    <div className="pt-6">
                       <OutlineButton href={s.anchor} withLeaf={false} className="px-6 py-3 text-[12px]">
                         Подробнее
                       </OutlineButton>
@@ -136,7 +140,7 @@ function ServicesPage() {
           className="scroll-mt-[100px] py-[90px] md:py-[120px]"
           style={{ backgroundColor: "var(--bg-secondary)" }}
         >
-          <div className="container-page max-w-[900px]">
+          <div className="container-page max-w-[800px]">
             <Reveal>
               <h2
                 id="diagnostika-title"
@@ -228,7 +232,7 @@ function ServicesPage() {
           className="scroll-mt-[100px] py-[90px] md:py-[120px]"
           style={{ backgroundColor: "var(--bg-primary)" }}
         >
-          <div className="container-page max-w-[900px]">
+          <div className="container-page max-w-[800px]">
             <Reveal>
               <h2
                 id="korrekciya-title"
@@ -287,7 +291,7 @@ function ServicesPage() {
           className="scroll-mt-[100px] py-[90px] md:py-[120px]"
           style={{ backgroundColor: "var(--bg-secondary)" }}
         >
-          <div className="container-page max-w-[900px]">
+          <div className="container-page max-w-[800px]">
             <Reveal>
               <h2
                 id="consulting-title"
@@ -344,7 +348,7 @@ function ServicesPage() {
           className="scroll-mt-[100px] py-[90px] md:py-[120px]"
           style={{ backgroundColor: "var(--bg-primary)" }}
         >
-          <div className="container-page max-w-[900px]">
+          <div className="container-page max-w-[800px]">
             <Reveal>
               <h2
                 id="skorochtenie-title"
