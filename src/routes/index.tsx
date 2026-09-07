@@ -148,12 +148,12 @@ function Index() {
                 Обо мне
               </SectionTitle>
               <p className="mt-6 max-w-xl text-[15px] leading-[1.75] text-muted-foreground sm:text-base">
-                Я — нейропсихолог, помогаю детям, подросткам и взрослым справляться с трудностями,
-                связанными с вниманием, памятью, мышлением, эмоциями и поведением.
+                Я — нейропсихолог, специалист по работе с дискалькулией и развитию навыков
+                эффективного чтения.
               </p>
               <p className="mt-4 max-w-xl text-[15px] leading-[1.75] text-muted-foreground sm:text-base">
-                Моя цель — раскрыть потенциал мозга и помочь вам достичь внутренней гармонии и
-                уверенности в себе.
+                Я — разработчик браузерных коррекционно-развивающих игр для онлайн-занятий для
+                нейропсихологов, логопедов, дефектологов.
               </p>
               <div className="mt-8">
                 <OutlineButton href="#services" className="w-full sm:w-auto">
@@ -173,7 +173,7 @@ function Index() {
         >
           <div className="container-page">
             <Reveal>
-              <SectionTitle id="services-title">Мои услуги</SectionTitle>
+              <SectionTitle id="services-title">Чем я могу помочь</SectionTitle>
             </Reveal>
             <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
               {SERVICES.map((s, i) => (
