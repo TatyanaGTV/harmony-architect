@@ -11,10 +11,10 @@ const CONTACTS = [
   },
   {
     label: "Email",
-    value: "email@example.com",
+    value: "tatyanaboyraz@gmail.com",
     path: "M3.5 6h17v12h-17V6Zm0 .8 8.5 6.4 8.5-6.4",
   },
-  { label: "Город", value: "Ваш город", path: "M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" },
+  { label: "Город", value: "Айдын", path: "M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" },
 ];
 
 export function ContactCTA() {
