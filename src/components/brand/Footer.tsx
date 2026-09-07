@@ -3,12 +3,12 @@ import logoMark from "@/assets/logo-mark.png.asset.json";
 const SOCIALS = [
   {
     label: "Telegram",
-    href: "#",
+    href: "https://t.me/neuro_dev_tatyana",
     path: "M21 4 3 11.2l5.2 1.9L18 7.4l-7 7.6.3 5 3-3.3 4 3.1L21 4Z",
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/tatiana_neuropsy?stkn=NG53OWZ4NmM0aTJs",
     path: "M7 3.5h10A3.5 3.5 0 0 1 20.5 7v10a3.5 3.5 0 0 1-3.5 3.5H7A3.5 3.5 0 0 1 3.5 17V7A3.5 3.5 0 0 1 7 3.5Zm5 4.7a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Zm5.3-1.4h.01",
   },
   {
@@ -48,6 +48,15 @@ export function Footer() {
 
         <div className="flex flex-col items-center gap-4 md:items-end">
           <a
+            href="mailto:tatyanaboyraz@gmail.com"
+            className="text-[13px] text-muted-foreground transition-colors hover:text-gold-light"
+          >
+            tatyanaboyraz@gmail.com
+          </a>
+          <span className="text-[13px] text-muted-foreground">
+            Айдын
+          </span>
+          <a
             href="#"
             className="text-[13px] text-muted-foreground transition-colors hover:text-gold-light"
           >
@@ -59,6 +68,8 @@ export function Footer() {
                 <a
                   href={s.href}
                   aria-label={s.label}
+                  target={s.href.startsWith("http") ? "_blank" : undefined}
+                  rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/35 text-gold transition-colors hover:bg-gold hover:text-ink"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
