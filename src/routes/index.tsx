@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/brand/Header";
 import { Hero } from "@/components/brand/Hero";
@@ -109,6 +110,69 @@ const APPROACH = [
   },
 ];
 
+const FAQ = [
+  {
+    question: "Как долго длится коррекция?",
+    answer:
+      "Минимальный курс нейропсихологической коррекции составляет 4 месяца. Общая длительность зависит от возраста ребёнка и выраженности учебных трудностей.",
+  },
+  {
+    question: "Можно ли начать занятия без диагностики?",
+    answer:
+      "Нет. Диагностика позволяет выявить причины трудностей, их механизм. На основе данных диагностики составляется коррекционная программа.",
+  },
+  {
+    question: "Эффективно ли заниматься онлайн?",
+    answer:
+      "Да, при условии соблюдения технических требований к проведению занятий, а также выполнения рекомендаций специалиста и домашних заданий.",
+  },
+  {
+    question: "После 12 лет уже поздно обращаться к нейропсихологу?",
+    answer:
+      "Нет. Мозг развивается до 25 лет. Поэтому при необходимости обращаться к нейропсихологу можно и нужно в любом возрасте.",
+  },
+  {
+    question: "Чем занимается нейропсихолог?",
+    answer:
+      "Помогает восстанавливать работу мозга у взрослых и детей после ДТП, инсультов, а также развивать высшие психические функции (ВПФ), такие как: память, восприятие, внимание, мышление, речь у детей, имеющих трудности обучения по тем или иным причинам.",
+  },
+];
+
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-gold/25">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-4 py-5 text-left"
+      >
+        <span className="font-heading text-[19px] leading-snug text-gold-light sm:text-[22px]">
+          {question}
+        </span>
+        <span
+          aria-hidden="true"
+          className={`shrink-0 text-gold transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1v14M1 8h14" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+          </svg>
+        </span>
+      </button>
+      <div
+        className={`grid transition-all duration-300 ease-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+      >
+        <div className="overflow-hidden">
+          <p className="pb-6 pr-8 text-[14.5px] leading-[1.75] text-muted-foreground sm:text-[15.5px]">
+            {answer}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen">
@@ -203,6 +267,27 @@ function Index() {
                 </Reveal>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ */}
+        <section
+          id="faq"
+          aria-labelledby="faq-title"
+          className="py-[90px] md:py-[110px]"
+          style={{ backgroundColor: "var(--bg-primary)" }}
+        >
+          <div className="container-page">
+            <Reveal>
+              <SectionTitle id="faq-title">Часто задаваемые вопросы</SectionTitle>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className="mx-auto mt-12 max-w-3xl border-t border-gold/25">
+                {FAQ.map((item) => (
+                  <FaqItem key={item.question} {...item} />
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 
