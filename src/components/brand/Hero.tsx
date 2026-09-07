@@ -19,8 +19,7 @@ export function Hero() {
         <div className="reveal" data-visible="true">
           <h1 className="font-heading text-[38px] leading-[1.02] tracking-[0.01em] sm:text-[46px] lg:text-[60px]">
             <span className="text-gold-gradient block">Нейропсихология</span>
-            <span className="text-gold-gradient block">для гармонии</span>
-            <span className="text-gold-gradient block">мозга и жизни</span>
+            <span className="text-gold-gradient block">детского возраста</span>
           </h1>
 
           <div className="mt-7 flex items-center gap-3 text-gold" aria-hidden="true">
@@ -29,8 +28,7 @@ export function Hero() {
           </div>
 
           <p className="mt-7 max-w-md text-[15px] leading-[1.6] text-muted-foreground sm:text-[17px]">
-            Индивидуальный подход к когнитивному развитию, эмоциональному благополучию и качеству
-            жизни.
+            Помогает понять, как развивается мозг и как ему помочь.
           </p>
 
           <div className="mt-9">
