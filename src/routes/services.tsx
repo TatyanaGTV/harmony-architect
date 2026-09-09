@@ -112,7 +112,7 @@ function ServicesPage() {
           style={{ backgroundColor: "var(--bg-primary)" }}
         >
           <div className="container-page">
-            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:gap-7">
               {SERVICES_CARDS.map((s, i) => (
                 <Reveal as="li" key={s.anchor} delay={i * 90} className="h-full">
                   <article className="flex h-full min-h-[270px] flex-col rounded-[var(--radius-card)] border border-gold/35 bg-card p-7 transition-all duration-[250ms] ease-out hover:-translate-y-[3px] hover:border-gold hover:bg-card-hover">

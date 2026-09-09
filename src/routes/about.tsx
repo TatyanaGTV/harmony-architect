@@ -254,7 +254,7 @@ function AboutPage() {
             <Reveal>
               <SectionTitle id="values-title">Мои ценности</SectionTitle>
             </Reveal>
-            <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:gap-8">
               {VALUES.map((v, i) => (
                 <Reveal as="li" key={v.num} delay={i * 90} className="h-full">
                   <article className="group flex h-full min-h-[230px] flex-col rounded-[18px] border border-gold/35 bg-card p-8 transition-all duration-[250ms] ease-out hover:-translate-y-[3px] hover:border-gold hover:bg-card-hover">

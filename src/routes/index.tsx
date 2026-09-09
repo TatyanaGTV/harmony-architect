@@ -239,7 +239,7 @@ function Index() {
             <Reveal>
               <SectionTitle id="services-title">Чем я могу помочь</SectionTitle>
             </Reveal>
-            <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:gap-8">
               {SERVICES.map((s, i) => (
                 <Reveal as="li" key={i} delay={i * 90} className="h-full">
                   <ServiceCard {...s} />
