@@ -12,7 +12,7 @@ export function ServiceCard({ icon, title, description }: ServiceCardProps) {
       <span className="text-gold transition-colors duration-300 group-hover:text-gold-light">
         {icon}
       </span>
-      <h3 className="mt-6 font-heading text-[24px] leading-snug text-gold-light">{title}</h3>
+      <h3 className="mt-6 font-heading text-[24px] leading-snug text-gold-light break-words">{title}</h3>
       <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">{description}</p>
     </article>
   );

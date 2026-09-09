@@ -261,7 +261,7 @@ function AboutPage() {
                     <span className="font-heading text-[20px] text-gold transition-colors duration-300 group-hover:text-gold-light">
                       {v.num}
                     </span>
-                    <h3 className="mt-5 font-heading text-[24px] leading-snug text-gold-light">
+                    <h3 className="mt-5 font-heading text-[24px] leading-snug text-gold-light break-words">
                       {v.title}
                     </h3>
                     <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">

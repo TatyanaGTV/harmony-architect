@@ -116,7 +116,7 @@ function ServicesPage() {
               {SERVICES_CARDS.map((s, i) => (
                 <Reveal as="li" key={s.anchor} delay={i * 90} className="h-full">
                   <article className="flex h-full min-h-[270px] flex-col rounded-[var(--radius-card)] border border-gold/35 bg-card p-7 transition-all duration-[250ms] ease-out hover:-translate-y-[3px] hover:border-gold hover:bg-card-hover">
-                    <h2 className="font-heading text-[22px] leading-snug text-gold-light">
+                    <h2 className="font-heading text-[22px] leading-snug text-gold-light break-words">
                       {s.title}
                     </h2>
                     <div className="flex-1" aria-hidden="true" />
